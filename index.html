@@ -3,7 +3,7 @@
 
 <head>
 
-  <!--Importação dos links css e fontes-->
+  <!--Importação das fontes google e arquivos do materialize-->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -30,9 +30,6 @@
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Bem-Vindo</a>
-
-      <!--menu mobile-->
-
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="https://www.instagram.com/cicero.jr49/" target="_blank">
             <img src="imagens/instagram1.png" style="width:55px;height:55px; float:left;">Meu Perfil do Instagram</a>
@@ -44,7 +41,7 @@
             <i class="material-icons right">arrow_drop_down</i>
           </a>
           <ul id='dropdown-menu' class='dropdown-content'>
-            <li><a href="#">Questão 1</a></li>
+            <li><a href="questoes/questao1.html">Questão 1</a></li>
             <li><a href="#">Questão 2</a></li>
             <li><a href="#">Questão 3</a></li>
           </ul>
@@ -70,7 +67,7 @@
           var drop = document.querySelectorAll('.dropdown-trigger');
           M.Dropdown.init(drop, {
             coverTrigger: false,
-            closeOnClick: false
+            closeOnClick: true
           })
         })
       </script>
@@ -93,8 +90,8 @@
               <ul>
                 <li>Veja esse código no Github através do link abaixo na imagem</li>
                 <li><a href="https://github.com/CiceroJunior777/Site-Atividade.git" target="_blank">
-                  <br>
-                  <img src="imagens/github.png" alt="Github"></a>
+                    <br>
+                    <img src="imagens/github.png" alt="Github"></a>
                 </li>
               </ul>
             </div>
