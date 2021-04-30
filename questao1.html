@@ -20,6 +20,25 @@
     </div>
   </nav>
 
+   <!--JavaScript-->
+   <script type="text/javascript" src="js/materialize.min.js"></script>
+
+   <script>
+     function media() {
+       var n1 = form_notas.nota01.value;
+       var n2 = form_notas.nota02.value;
+       var n3 = form_notas.nota03.value;
+       var n4 = form_notas.nota04.value;
+ 
+       var media = (parseFloat(n1) + parseFloat(n2) + parseFloat(n3) + parseFloat(n4)) / 4;
+ 
+       if (media >= 7) {
+         alert("Você foi Aprovado: " + media.toFixed(1));
+       } else
+         alert("Você foi reprovado: " + media.toFixed(1));
+     }
+   </script>
+   
   <!--entrada-->
   <div class="row">
     <form name="form_notas" class="col s12">
@@ -47,25 +66,6 @@
       </button>
   </div>
 
-
-  <!--JavaScript-->
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-
-  <script>
-    function media() {
-      var n1 = form_notas.nota01.value;
-      var n2 = form_notas.nota02.value;
-      var n3 = form_notas.nota03.value;
-      var n4 = form_notas.nota04.value;
-
-      var media = (parseFloat(n1) + parseFloat(n2) + parseFloat(n3) + parseFloat(n4)) / 4;
-
-      if (media >= 7) {
-        alert("Você foi Aprovado Parabéns, Sua média foi: " + media.toFixed(1));
-      } else
-        alert("Que pena você foi reprovado, Sua média foi: " + media.toFixed(1));
-    }
-  </script>
 </body>
 
 </html>
