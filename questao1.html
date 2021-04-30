@@ -25,45 +25,60 @@
 
    <script>
      function media() {
-       var n1 = form_notas.nota01.value;
-       var n2 = form_notas.nota02.value;
-       var n3 = form_notas.nota03.value;
-       var n4 = form_notas.nota04.value;
- 
-       var media = (parseFloat(n1) + parseFloat(n2) + parseFloat(n3) + parseFloat(n4)) / 4;
+        var nota01 = parseFloat(document.getElementById('nota1').value);
+        var nota02 = parseFloat(document.getElementById('nota2').value);
+        var nota03 = parseFloat(document.getElementById('nota3').value);
+        var nota04 = parseFloat(document.getElementById('nota4').value);
+        var aluno = document.getElementById('nome').value;
+        
+        var media = parseFloat((nota01 + nota02 + nota03 + nota04) / 4);
+      
  
        if (media >= 7) {
-         alert("Você foi Aprovado: " + media.toFixed(1));
+         resultado = aluno + " Você foi Aprovado sua média foi de " + media.toFixed(1);
        } else
-         alert("Você foi reprovado: " + media.toFixed(1));
+         resultado = aluno + " Você foi reprovado sua média foi de " + media.toFixed(1);
+
+         document.getElementById('media').setAttribute("value", resultado);
      }
    </script>
    
   <!--entrada-->
   <div class="row">
     <form name="form_notas" class="col s12">
-      <form class="col s12">
-        <div class="row">
-          <div class="input-field col s3">
-            <input id="nota 1" type="text" name="nota01" class="validate">
-            <label for="first_name">Nota 01</label>
-          </div>
-          <div class="input-field col s3">
-            <input id="nota 2" type="text" name="nota02" class="validate">
-            <label for="last_name">Nota 02</label>
-          </div>
-          <div class="input-field col s3">
-            <input id="nota 3" type="text" name="nota03" class="validate">
-            <label for="last_name">Nota 03</label>
-          </div>
-          <div class="input-field col s3">
-            <input id="nota 4" type="text" name="nota04" class="validate">
-            <label for="last_name">Nota 04</label>
-          </div>
-      </form>
-      <button class="btn waves-effect waves-light" type="submit" onclick="media()" name="action">Enviar
-        <i class="material-icons right">send</i>
-      </button>
+      <div class="row">
+        <div class="input-field col s4">
+          <input id="nome" type="text" placeholder="ex: francisco" class="validate">
+          <label for="first_name">Digite Seu Nome</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="numero" type="tel" max="13" placeholder="ex: 5588994278279" class="validate">
+          <label for="first_name">Digite Seu Número de Telefone</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="email" type="email" placeholder="ex: empresa@gmail.com" class="validate">
+          <label for="first_name">Digite Seu E-mail</label>
+        </div>
+        <div class="input-field col s3">
+          <input id="nota1" type="text" placeholder="De 1.0 até 10" class="validate">
+          <label for="first_name">Nota 01</label>
+        </div>
+        <div class="input-field col s3">
+          <input id="nota2" type="text" placeholder="De 1.0 até 10" class="validate">
+          <label for="first_name">Nota 02</label>
+        </div>
+        <div class="input-field col s3">
+          <input id="nota3" type="text" placeholder="De 1.0 até 10" class="validate">
+          <label for="first_name">Nota 03</label>
+        </div>
+        <div class="input-field col s3">
+          <input id="nota4" type="text" placeholder="De 1.0 até 10" class="validate">
+          <label for="first_name">Nota 04</label>
+        </div>
+        <a class="waves-effect waves-light btn-small" onclick="javascript:media()">Obter Resultado</a>
+    <input type="text" id="media" value="">
+  </form>
+  </div>
   </div>
 
 </body>

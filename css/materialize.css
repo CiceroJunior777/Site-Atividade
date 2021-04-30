@@ -8269,7 +8269,8 @@ input[type=range]::-ms-thumb {
 .slider {
   position: relative;
   height: 400px;
-  width: 100%;
+  width: 40%;
+  margin-left: 55px;
 }
 
 .slider.fullscreen {
@@ -9084,15 +9085,26 @@ input[type=range]::-ms-thumb {
   }
 }
 h1{
-    color:white;
-    font-size: 250%;
+    color:red;
+    font-size: 330%;
+    margin-top: 1.2rem;
+    margin-left: 3.5rem;
 }
 pre{
     color:white;
-    font-size: 150%;
+    font-size: 130%;
+    text-align: justify;
 }
 footer{
     position: absolute;
     bottom: auto;
     width: 100%;
 }
+p1{
+  color: red;
+  font-size: 150%;
+}
+h3{
+  color: blue;
+}
+

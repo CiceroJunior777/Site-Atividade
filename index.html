@@ -15,10 +15,11 @@
 </head>
 
 <!--imagem de fundo-->
+
 <body>
   <style>
     body {
-      background-image: url("imagens/fundo.jpg");
+      background-image: url("imagens/fundo.png");
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
@@ -29,7 +30,7 @@
   <!--layout de inicio-->
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Bem-Vindo</a>
+      <a href="#" class="brand-logo">Bem-Vindo a GamesBR</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="https://www.instagram.com/cicero.jr49/" target="_blank">
             <img src="imagens/instagram1.png" style="width:55px;height:55px; float:left;">Meu Perfil do Instagram</a>
@@ -48,20 +49,67 @@
     </div>
   </nav>
 
-  
+
   <!--Conteúdo do site-->
   <ul>
-    <h1>• Sobre mim</h1>
+    <h1><b>Evolução Gráfica dos Jogos</b></h1>
     <pre>
-      • Meu nome é Cícero Júnior, tenho 18 anos, e estou cursando 
-      • ánalise e desenvolvimento de sistemas na unileão.
-      • Sou técnico em Redes de computadores.
-      • tenho conhecimento básico em css, html, javascript e mysql.
-      • pretendo no futuro ser desenvolvedor de jogos.
+        Os jogos tiveram um início de criação em 1962, 
+      e vem passando por mudanças na sua parte gráfica desde 1979, 
+      no qual foram atualizações consideravelmente robustas desde seu início
+      até os dias atuais, contudo se observarmos alguns games tiveram melhorias
+      nos seus gráficos que melhoraram muito até no estilo de jogo. 
+      um dos mais conhecidos dessa lista é o Zelda, um game que desde seu início 
+      até os dias atuais vem melhorando bastante nessa parte gráfica.
+
+      <p1>Resident Evil</p1>
+
+        Um dos jogos mais marcantes da história dos gamers o Resident Evil 
+      também passou por mudanças significativas e importantes até seu estado 
+      atual no qual o jogo conta com uma base gráfica incrível.
+
+      <p1>Jogos de Esportes</p1>
+
+        Dois jogos que competem sua popularidade até hoje, também sofreram grandes mudanças na sua 
+      parte gráfica o Pes e o FiFa hoje trazem uma maior realidade gráfica nos seus jogos com 
+      personagens de aparências de deixar qualquer pessoa de boca "aberta" como diz o ditado.
+
+      <img src="imagens/pes2020.jpg" width="350px" height="300px">  <img src="imagens/messi.png" width="350px" height="300px">
+
+      Dentre outros games famosos, todos sofreram grandes mudanças nessa parte e hoje deixam qualquer um impressionado 
+      com essa evolução que trouxe uma realidade e vida impressionante para eles.
       </pre>
     <ul>
-
-
+      <!--imagens deslizantes-->
+      <div class="slider">
+        <ul class="slides">
+          <li>
+            <img src="imagens/slide1.jpeg"> <!-- random image -->
+            <div class="caption center-align">
+              <h3><b>God of War</b></h3>
+            </div>
+          </li>
+          <li>
+            <img src="imagens/street-fighter.jpg"> <!-- random image -->
+            <div class="caption left-align">
+              <h3><b>Street Fighter</b></h3>
+            </div>
+          </li>
+          <li>
+            <img src="imagens/fifaevo.jpg"> <!-- random image -->
+            <div class="caption right-align">
+              <h3><b>FiFa</b></h3>
+            </div>
+          </li>
+          <li>
+            <img src="imagens/jogos.jpg"> <!-- random image -->
+            <div class="caption center-align">
+              <h3><b>Jogos de esporte</b></h3>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
       <!--javascript-->
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script>
@@ -72,8 +120,11 @@
             closeOnClick: true
           })
         })
-      </script>
-
+        document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems);
+  });
+</script>
 
       <!--Rodapé-->
       <footer class="page-footer">
@@ -107,7 +158,7 @@
         </div>
       </footer>
 
-      
+
       <!--link de acesso ao WhatsApp-->
       <div id="whatswidget-pre-wrapper" class="">
         <div id="whatswidget-widget-wrapper" class="whatswidget-widget-wrapper" style="all:revert;">
