@@ -42,7 +42,7 @@
             <label for="last_name">Nota 04</label>
           </div>
       </form>
-      <button class="btn waves-effect waves-light" type="submit" onclick="alert.media()" name="action">Enviar
+      <button class="btn waves-effect waves-light" type="submit" onclick="media()" name="action">Enviar
         <i class="material-icons right">send</i>
       </button>
   </div>
@@ -61,9 +61,9 @@
       var media = (parseFloat(n1) + parseFloat(n2) + parseFloat(n3) + parseFloat(n4)) / 4;
 
       if (media >= 7) {
-        alert("Você foi Aprovado Parabéns. Sua média foi: " + media.toFixed(1));
+        alert("Você foi Aprovado Parabéns, Sua média foi: " + media.toFixed(1));
       } else
-        alert("Você foi Aprovado Parabéns. Sua média foi: " + media.toFixed(1));
+        alert("Que pena você foi reprovado, Sua média foi: " + media.toFixed(1));
     }
   </script>
 </body>
