@@ -15,71 +15,68 @@
   <!--topo da pagina-->
   <nav>
     <div class="nav-wrapper">
-      <a class="brand-logo center">Questão 01</a>
+      <a class="brand-logo center">Calcular média</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="index.html"> <i class="material-icons left">arrow_back</i>Voltar a página inicial</a></li>
       </ul>
     </div>
   </nav>
 
-   <!--JavaScript-->
-   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <!--JavaScript-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
 
-   <script>
-     function media() {
-        var nota01 = parseFloat(document.getElementById('nota1').value);
-        var nota02 = parseFloat(document.getElementById('nota2').value);
-        var nota03 = parseFloat(document.getElementById('nota3').value);
-        var nota04 = parseFloat(document.getElementById('nota4').value);
-        var aluno = document.getElementById('nome').value;
-        
-        var media = parseFloat((nota01 + nota02 + nota03 + nota04) / 4);
-      
- 
-       if (media >= 7) {
-         resultado = aluno + " Você foi Aprovado sua média foi de " + media.toFixed(1);
-       } else
-         resultado = aluno + " Você foi reprovado sua média foi de " + media.toFixed(1);
+  <script>
+    function media() {
+      var nota01 = parseFloat(document.getElementById('nota1').value);
+      var nota02 = parseFloat(document.getElementById('nota2').value);
+      var aluno = document.getElementById('nome').value;
+      var disc = document.getElementById('disciplina').value;
 
-         document.getElementById('media').setAttribute("value", resultado);
-     }
-   </script>
-   
+      var media = parseFloat((nota01 + nota02) / 2);
+
+
+      if (media >= 7) {
+        resultado = aluno + ", " + " você está aprovado na disciplina de " + disc +" sua média foi "+ media.toFixed(1);
+      } else if (media >3, media <7) {
+        resultado = aluno + ", " +" você está de recuperação na disciplina de " + disc +" sua média foi "+ media.toFixed(1)
+      } else {
+        resultado = aluno + ", " +" você está reprovado na disciplina de " + disc +" sua média foi "+ media.toFixed(1)
+      }
+      document.getElementById('media').setAttribute("value", resultado);
+    }
+  </script>
+
   <!--entrada-->
   <div class="row">
     <form name="form_notas" class="col s12">
       <div class="row">
-        <div class="input-field col s4">
+        <div class="input-field col s3">
           <input id="nome" type="text" placeholder="ex: francisco" class="validate">
           <label for="first_name">Digite Seu Nome</label>
         </div>
-        <div class="input-field col s4">
+        <div class="input-field col s3">
+          <input id="disciplina" type="text" placeholder="ex: ADS" class="validate">
+          <label for="first_name">disciplina</label>
+        </div>
+        <div class="input-field col s3">
           <input id="numero" type="tel" max="13" placeholder="ex: 5588994278279" class="validate">
           <label for="first_name">Digite Seu Número de Telefone</label>
         </div>
-        <div class="input-field col s4">
+        <div class="input-field col s3">
           <input id="email" type="email" placeholder="ex: empresa@gmail.com" class="validate">
           <label for="first_name">Digite Seu E-mail</label>
         </div>
-        <div class="input-field col s3">
+        <div class="input-field col s6">
           <input id="nota1" type="text" placeholder="De 1.0 até 10" class="validate">
           <label for="first_name">Nota 01</label>
         </div>
-        <div class="input-field col s3">
+        <div class="input-field col s6">
           <input id="nota2" type="text" placeholder="De 1.0 até 10" class="validate">
           <label for="first_name">Nota 02</label>
         </div>
-        <div class="input-field col s3">
-          <input id="nota3" type="text" placeholder="De 1.0 até 10" class="validate">
-          <label for="first_name">Nota 03</label>
-        </div>
-        <div class="input-field col s3">
-          <input id="nota4" type="text" placeholder="De 1.0 até 10" class="validate">
-          <label for="first_name">Nota 04</label>
-        </div>
         <a class="waves-effect waves-light btn-small" onclick="javascript:media()">Obter Resultado</a>
-    <input type="text" id="media" value="">
-  </form>
+        <input type="text" id="media" value="">
+    </form>
   </div>
   </div>
 
