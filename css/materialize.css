@@ -9107,4 +9107,11 @@ p1{
 h3{
   color: blue;
 }
-
+#pagamento { 
+  width: 800px; 
+  height: 150px; 
+  left: 35%; 
+  margin: -130px 0 0 -210px; 
+  padding:10px;
+  position: absolute; 
+  top: 50%; }
