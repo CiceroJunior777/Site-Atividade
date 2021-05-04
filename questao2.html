@@ -29,6 +29,14 @@
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="index.html"> <i class="material-icons left">arrow_back</i>Voltar a página inicial</a></li>
             </ul>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <a class="bnt accent-1 dropdown-trigger" href="" data-target="dropdown-menu">Questões
+                  <i class="material-icons right">arrow_drop_down</i>
+                </a>
+                <ul id='dropdown-menu' class='dropdown-content'>
+                  <li><a href="questao1.html">Questão 01</a></li>
+                  <li><a href="questao3.html">Questão 03</a></li>
+                </ul>
         </div>
     </nav>
 
@@ -68,13 +76,20 @@
                 document.writeln("<br>\n---------------------------------------------------------------------------------------\n<br>", informacoes, "<br>", "PARCELA ", i, "/", parcela, "<br>\n---------------------------------------------------------------------------------------\n<br>")
             }
         }
+        document.addEventListener('DOMContentLoaded', function () {
+          var drop = document.querySelectorAll('.dropdown-trigger');
+          M.Dropdown.init(drop, {
+            coverTrigger: false,
+            closeOnClick: true
+          })
+        })
     </script>
 
 
     <!--Formulário-->
     <div class="row">
         <form class="col s12">
-            <div id="pagamento" class="row">
+            <div id="form1" class="row">
                 <div class="input-field col s6">
                     <input placeholder="insira seu nome" id="nome" type="text" class="validate">
                     <label for="first_name">Nome</label>

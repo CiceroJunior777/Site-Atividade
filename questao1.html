@@ -26,6 +26,14 @@
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="index.html"> <i class="material-icons left">arrow_back</i>Voltar a página inicial</a></li>
       </ul>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <a class="bnt accent-1 dropdown-trigger" href="" data-target="dropdown-menu">Questões
+        <i class="material-icons right">arrow_drop_down</i>
+      </a>
+      <ul id='dropdown-menu' class='dropdown-content'>
+        <li><a href="questao2.html">Questão 02</a></li>
+        <li><a href="questao3.html">Questão 03</a></li>
+      </ul>
     </div>
   </nav>
 
@@ -51,11 +59,18 @@
       }
       document.getElementById('media').setAttribute("value", resultado);
     }
+    document.addEventListener('DOMContentLoaded', function () {
+          var drop = document.querySelectorAll('.dropdown-trigger');
+          M.Dropdown.init(drop, {
+            coverTrigger: false,
+            closeOnClick: true
+          })
+        })
   </script>
 
   <!--entrada-->
   <div class="row">
-    <form name="form_notas" class="col s12">
+    <form id="form1" name="form_notas" class="col s12">
       <div class="row">
         <div class="input-field col s3">
           <input id="nome" type="text" min="5" max="50" placeholder="ex: francisco" class="validate">
